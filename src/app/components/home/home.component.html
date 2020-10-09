@@ -1,0 +1,29 @@
+<div class="container-fluid p-0 position-fixed shadow" style="z-index:10;">
+    <ul>
+        <li (click)="ngOnInit()" [class.active]="catname == 'ALL'">ALL</li>
+        <li *ngFor="let categories of category" (click)="getpost(categories.cat_id, categories.cat_name)" [class.active]="categories.cat_name == catname">{{categories.cat_name}}</li>
+    </ul>
+</div>
+
+<div class="banner" style="margin-top: 66px;">
+    <h1 class="divider-heading-container divider-h1 mb-0">
+        <span>{{catname}}</span>
+    </h1>
+</div>
+
+<div class="container pt-3">
+    <div class="row d-flex">
+        <div class="col-md-4 d-flex hover_me img-fluid mb-3" *ngFor="let posts of allpost" routerLink="/blog_view/{{posts.cat_id}}/{{posts.post_id}}">
+            <div class="card card-cascade wider">
+                <div class="view view-cascade overlay">
+                    <img  class="card-img-top" src="http://localhost/Blog_Project/uploads/{{posts.featured_image}}">         
+                </div>
+                <div class="card-body card-body-cascade text-center pb-0 mb-2 change_clr">
+                    <h5 class="card-title"><strong>{{posts.post_heading}}</strong></h5>     
+                </div>     
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,22 @@
+*:focus {
+    outline: 0;
+    outline: none;
+}
+h3::before,
+h3::after {
+    display: inline-block;
+    content: "";
+    border-top: 4px solid rgb(232, 235, 236);
+    width: 4rem;
+    margin: 0 9px;
+    transform: translateY(-7px);
+}
+.change_clr:hover{
+    color: #39B5FD;
+}
+img:hover, h5{
+    cursor:pointer;
+}
+.card:hover h5{
+    color: #39B5FD;
+}

@@ -1,0 +1,33 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark sticky-top" [containerInside]="false">
+  <mdb-navbar-brand>
+      <a class="navbar-brand" routerLink="home">
+          <img src="../assets/images/logo.png" height="30" width="150" class="d-inline-block align-top" alt="logo">
+      </a>
+  </mdb-navbar-brand>
+  <links> 
+    <ul class="navbar-nav ml-auto font-weight-bold">
+      <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="home">HOME</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="about">ABOUT</a>
+      </li> 
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="contact">CONTACT</a>
+      </li> 
+    </ul>
+  </links>
+</mdb-navbar>
+<!--Navbar-->
+<!-- <hr style="color:white; margin-top:1px;margin-bottom:1px;">
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+    <ul class="navbar-nav mr-auto font-weight-bold">
+      <li class="nav-item" routerLinkActive="active" *ngFor="let categories of category">
+        <a class="nav-link" routerLink="/category_view/{{categories.cat_id}}/{{categories.post_id}}" mdbWavesEffect>{{ categories.cat_name }}</a>
+    </li>  
+    </ul>
+  </div>
+</nav> -->
+       

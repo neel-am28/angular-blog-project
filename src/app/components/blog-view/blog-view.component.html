@@ -1,0 +1,22 @@
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-8" *ngIf="postData!=null">
+            <p [innerHTML]="postData.content" class="text-body"></p>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="row">
+                <h3 class="text-center">Related Posts</h3>
+                <div class="col-12 mb-3" *ngFor="let data of getRelatedData" routerLink="/blog_view/{{data.cat_id}}/{{data.post_id}}" (click)="getpost(data.cat_id,data.post_id)">
+                    <div class="card card-cascade wider">
+                        <div class="view view-cascade overlay">
+                            <img  class="card-img-top" src="http://localhost/Blog_Project/uploads/{{data.featured_image}}">                
+                        </div>
+                        <div class="card-body card-body-cascade text-center pb-0 mb-2 change_clr">
+                            <h5 class="card-title"><strong>{{data.post_heading}}</strong></h5>     
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

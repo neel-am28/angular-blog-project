@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap');
+.navbar{
+    background:#0F1011 !important;
+}  
+li.nav-item{
+    margin-right: 5px;
+} 
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link{
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 18px;
+}
+.navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
+    background-color: #39B5FD !important;
+    border-radius: 2px;
+}
